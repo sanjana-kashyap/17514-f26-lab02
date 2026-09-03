@@ -12,7 +12,8 @@ import java.util.List;
 public class AvailabilityCalculator {
 
     /**
-     * Returns the free gaps in {@code [dayStart, dayEnd)} not covered by any booking,
+     * Returns the free gaps in {@code [dayStart, dayEnd)} not covered by any
+     * booking,
      * in order. Bookings may be unsorted, may overlap each other, and may extend
      * outside business hours; they are clipped to the day and merged.
      */
@@ -35,6 +36,11 @@ public class AvailabilityCalculator {
             }
             cursor = Math.max(cursor, b.end());
         }
+
+        if (cursor < dayEnd) {
+            free.add(new TimeInterval(cursor, dayEnd));
+        }
+
         return free;
     }
 }
