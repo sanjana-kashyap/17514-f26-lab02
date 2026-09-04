@@ -41,3 +41,7 @@ See the Lab 2 handout on the course page for the three milestones you show a TA.
 - As the bug surfaced in Milestone 1, there was no test with an empty list of bookings, while the opposite case of a day being fully booked out is tested. This would be a **controllability gap**.
 - We are not verifying invalid inputs are handled correctly - such as an empty time interval. This would be an **observability gap**.
 - We are also not checking for back-to-back, consecutive bookings in our input list. This would be a **controllability gap**.
+
+## Agents Used
+
+I used the GitHub Copilot agent with the GPT Luna-5.6 model running underneath.
